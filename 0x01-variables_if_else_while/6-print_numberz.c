@@ -1,19 +1,23 @@
+#include <stdlib.h>
 #include <stdio.h>
+#include <time.h>
+
 /**
- * main - prints numbers 0-9 without using char or printf/puts,
- * and putchar 2x max
-(*
- * Return: 0 on success
- */
+* main - entry point
+*
+* Return: Always 0
+*/
+
 int main(void)
 {
-	int s = '0';
+	int x = 48;
 
-	while (s <= '9')
+	while (x <= '9')
 	{
-		putchar(i);
-		s++;
+		putchar(x);
+		x++;
 	}
-	putchar('\n');
+		putchar('\n');
+
 	return (0);
 }
