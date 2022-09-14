@@ -2,14 +2,11 @@
 /**
  * print_last_digit - print the last digit for a given number
  *
- * @x: first integer num 
- * @y:second integer num
- *
- * Return: int 
+ *  @i: The first number to be added.
+ * @j: The second number to be added.
+ * Return: the sum of two numbers.
  */
-int add(int x, int y)
-
+int add(int i, int j)
 {
-      return (x + y);
+	return (i + j);
 }
- 
