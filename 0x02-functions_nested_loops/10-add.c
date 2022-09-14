@@ -2,14 +2,13 @@
 /**
  * print_last_digit - print the last digit for a given number
  *
- * @x: first integer num 
- * @y:second integer num
+ * @a: first integer num 
+ * @b:second integer num
  *
  * Return: int 
  */
-int add(int x , int y)
+int add(int a , int b)
 
 {
-      return (x+y);
+      return (a+b);
 }
-
