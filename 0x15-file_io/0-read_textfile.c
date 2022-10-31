@@ -1,4 +1,4 @@
-nclude <stdio.h>
+#include <stdio.h>
 
 #include <stdlib.h>
 
@@ -28,54 +28,62 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 {
 
-		ssize_t file, let, w;
+		ssize_t o, r, w;
 
-			char *text;
-
-
-
-				text = malloc(letters);
-
-					if (text == NULL)
-
-								return (0);
+			char *buffer;
 
 
 
-						if (filename == NULL)
+				if (filename == NULL)
+
+							return (0);
+
+
+
+					buffer= malloc(sizeof(char)*letters);
+
+						if (buffer == NULL)
 
 									return (0);
 
 
 
-							file = open(filename, O_RDONLY);
+							
 
 
 
-								if (file == -1)
-
-										{
-
-													free(text);
-
-															return (0);
-
-																}
+							o = open(filename, O_RDONLY);
 
 
 
-									let = read(file, text, letters);
+								r = read(o, buffer, letters);
 
 
 
-										w = write(STDOUT_FILENO, text, let);
+									w = write(STDOUT_FILENO, text, let);
 
 
 
-											close(file);
+										if (o == -1 || r ==-1 || w == -1 || w != r)
+
+												{
+
+															free(buffer);
+
+																	return (0);
+
+																		}
 
 
 
-												return (w);
+											
+
+											free(buffer);
+
+												close(file);
+
+
+
+													return (w);
 
 }
